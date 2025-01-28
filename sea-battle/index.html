@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Морской бой</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Морской бой</h1>
+<div id="game-container">
+    <div id="player-board" class="board"></div>
+    <div id="computer-board" class="board"></div>
+</div>
+<div id="status"></div>
+
+<div id="score-panel">
+    <p>Последний ход: <span id="last-move"></span></p>
+    <p>Счет игрока: <span id="player-wins">0</span></p>
+    <p>Счет компьютера: <span id="computer-wins">0</span></p>
+</div>
+<button id="reset-button">Сброс игры</button>
+<div id="message-box"></div> <!-- Добавлено для отображения сообщений -->
+<script type="module" src="scripts/main.js"></script>
+</body>
+</html>
