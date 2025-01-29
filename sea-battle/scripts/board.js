@@ -25,19 +25,23 @@ export class Board {
         const letters = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К'];
         const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
-        // Добавляем буквы для столбцов
+        // Добавляем буквы для столбцов (сверху)
         for (let i = 0; i < 10; i++) {
             const colLabel = document.createElement('div');
             colLabel.className = 'coordinate-label col-label';
             colLabel.textContent = letters[i];
+            colLabel.style.gridColumn = i + 2; // Буквы начинаются со второго столбца
+            colLabel.style.gridRow = 1; // Буквы в первой строке
             this.container.appendChild(colLabel);
         }
 
-        // Добавляем цифры для строк
-        for (let i = 0; i < 10; i++) {
+        // Добавляем цифры для строк (слева)
+        for (let i = 0; i < 11; i++) {
             const rowLabel = document.createElement('div');
             rowLabel.className = 'coordinate-label row-label';
             rowLabel.textContent = numbers[i];
+            rowLabel.style.gridColumn = 1; // Цифры в первом столбце
+            rowLabel.style.gridRow = i + 1;
             this.container.appendChild(rowLabel);
         }
     }
