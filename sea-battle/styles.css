@@ -129,3 +129,12 @@ h1 {
     grid-row: span 10; /* Цифры занимают 10 строк */
     margin-top: 40px; /* Смещаем цифры на одну ячейку вниз */
 }
+
+.cell.ship.computer {
+    background-color:  #e0e0e0; /* Корабли компьютера изначально невидимы */
+    border: 1px solid black; /* Оставляем границы клеток */
+}
+
+.cell.ship.computer.hit {
+    background-color: blue; /* Корабли компьютера становятся видимыми после попадания */
+}

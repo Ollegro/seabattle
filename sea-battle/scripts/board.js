@@ -64,6 +64,9 @@ export class Board {
             if (this.isPlayer) {
                 cell.classList.add('player');
             }
+            else {
+                cell.classList.add('computer'); // Добавляем класс для кораблей компьютера
+            }
         }
     }
 
